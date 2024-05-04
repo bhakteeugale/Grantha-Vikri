@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inventory"
+        android:title="@string/inventory"
+        android:icon="@drawable/baseline_inventory_24"/>
+
+    <item
+        android:id="@+id/group"
+        android:title="@string/group"
+        android:icon="@drawable/baseline_apps_24"/>
+
+    <item
+        android:id="@+id/event"
+        android:title="Event"
+        android:icon="@drawable/baseline_add_card_24"
+        />
+
+    <item
+        android:id="@+id/sale"
+        android:title="@string/sale"
+        android:icon="@drawable/baseline_sell_24"/>
+
+    <item
+        android:id="@+id/report"
+        android:title="@string/report"
+        android:icon="@drawable/baseline_bar_chart_24"
+        />
+
+    <item
+        android:id="@+id/exit"
+        android:title="@string/exit"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        />
+</menu>

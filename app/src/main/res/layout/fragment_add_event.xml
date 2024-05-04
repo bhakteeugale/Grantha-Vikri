@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AddEventFragment">
+
+    <include layout="@layout/subactionbar_card"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/add_event_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Event"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20sp"
+                android:layout_gravity="end"/>
+
+<!--            layout for event details-->
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                app:cardElevation="5sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp"
+                    android:orientation="vertical"
+                    android:background="@drawable/new_border2">
+
+                    <LinearLayout
+                        android:id="@+id/clickable_event_add_details_layout"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/event_add_details_img_view"
+                            android:src="@drawable/baseline_expand_more_24"
+                            android:layout_width="28sp"
+                            android:layout_height="25sp"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/image_button_background"/>
+                        <TextView
+                            android:text="Add Event Details (Mandatory)"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/event_details_form_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:padding="10sp">
+
+                        <EditText
+                            android:id="@+id/name_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:hint="Event Name (Required)"
+                            android:inputType="text"
+                            android:padding="5sp"
+                            android:layout_marginBottom="10dp" />
+
+                        <EditText
+                            android:id="@+id/place_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:padding="5sp"
+                            android:hint="Event Place (Required)"
+                            android:inputType="text"
+                            android:layout_marginBottom="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="15dp">
+
+                            <Button
+                                android:id="@+id/date_picker_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select Date"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="10dp"/>
+
+                            <TextView
+                                android:id="@+id/date_event_textview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Event Date"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+<!--            layout for adding event items-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                app:cardElevation="5sp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/new_border2">
+
+                    <LinearLayout
+                        android:id="@+id/clickable_event_add_items_layout"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/event_add_items_img_view"
+                            android:src="@drawable/baseline_expand_more_24"
+                            android:layout_width="28sp"
+                            android:layout_height="25sp"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/image_button_background"/>
+                        <TextView
+                            android:text="Add Items to Event (Mandatory)"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/form_add_items_layout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:layout_marginTop="5sp"
+                        android:visibility="gone">
+
+                        <include layout="@layout/req_spinners"/>
+
+                        <LinearLayout
+                            android:id="@+id/quantity_and_price_for_inventory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10sp">
+                            <include layout="@layout/stock_quantity_price"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/quantity_and_price_for_group_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10sp"
+                            android:visibility="gone"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:text="Group Price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:id="@+id/group_price_details"
+                                    android:text="₹0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/quantity_for_group"
+                                android:hint="Quantity(Required)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50sp"
+                                android:textSize="15sp"
+                                android:layout_gravity="start"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/add_item_to_event_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Item"
+                            android:textColor="@color/black"
+                            android:layout_gravity="end"
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+<!--            layout for viewing event added items-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5sp"
+                android:layout_marginBottom="20sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:background="@drawable/new_border2">
+
+                    <LinearLayout
+                        android:id="@+id/clickable_event_view_items_layout"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/event_view_items_img_view"
+                            android:src="@drawable/baseline_expand_more_24"
+                            android:layout_width="28sp"
+                            android:layout_height="25sp"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/image_button_background"/>
+                        <TextView
+                            android:text="View Items"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_item_list"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:background="@drawable/new_border"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10sp">
+                            <Spinner
+                                android:id="@+id/type_of_item_spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50sp"
+                                android:padding="8sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/view_inventory_items_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <include layout="@layout/inventory_cell_layout"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/inventory_items_in_event"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/view_group_items_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <include layout="@layout/group_cell_layout_event"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/group_items_in_event"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

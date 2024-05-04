@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_bar">
+        <include
+            android:layout_alignBottom="@+id/main"
+            layout="@layout/toolbar_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main"
+        android:layout_marginTop="57dp"
+        android:padding="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/kendra1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/kendra1"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/kendra2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kendra2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/kendra1_btn"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/kendra1_btn" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

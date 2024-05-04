@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gridlayout_for_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:visibility="visible">
+
+        <!-- Guidelines to divide the screen into equal parts -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.333" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.666" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <!-- Top-left element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/inventory_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            android:layout_margin="15sp"
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_1"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_inventory_24"
+                    android:layout_marginBottom="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inventory" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Top-right element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/group_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            android:layout_margin="15sp"
+
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="15sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_apps_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/group" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Middle-left element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            android:layout_margin="15sp"
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_2"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="15sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_add_card_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Middle-right element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sale_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="15sp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="15sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_sell_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sale" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom-left element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/report_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="15sp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="15sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_bar_chart_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom-right element -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/exit_home_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="15sp"
+            android:background="@drawable/custom_border"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:cardElevation="5sp"
+            app:contentPadding="10sp"
+            app:cardCornerRadius="5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginBottom="15sp"
+                    android:contentDescription="@string/inventory"
+                    android:src="@drawable/baseline_exit_to_app_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exit" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

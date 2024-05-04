@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/new_border2"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:padding="5sp"
+        android:textSize="13sp"
+        android:text="Group Name"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/group_quantity_available"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5sp"
+        android:textSize="13sp"
+        android:text="Quantity Available"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/group_quantity_sold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5sp"
+        android:textSize="13sp"
+        android:text="Quantity Sold"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

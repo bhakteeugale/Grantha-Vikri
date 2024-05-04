@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.InventoryFragment"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/subactionbar_card2"/>
+
+    <LinearLayout
+        android:background="@drawable/new_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20sp"
+        android:padding="8sp">
+        <Spinner
+            android:id="@+id/type_inventory_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:id="@+id/book_list_recyclerview">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cd_list_recyclerview"
+                android:layout_margin="10sp"
+            android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_list_recyclerview"
+             android:layout_margin="10sp"
+            android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

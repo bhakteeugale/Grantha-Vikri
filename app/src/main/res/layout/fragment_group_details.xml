@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GroupDetailsFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/subactionbar_card"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="15sp">
+
+
+        <!--    layout for group-->
+        <LinearLayout
+            android:id="@+id/layout_for_group"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/group_det_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Group name"
+                />
+
+            <TextView
+                android:id="@+id/date_det_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Added on " />
+
+            <TextView
+                android:id="@+id/price_det_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Price ₹"
+                android:layout_marginBottom="20dp"/>
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0.5dp"/>
+        </LinearLayout>
+
+
+        <!--    layout for event-->
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

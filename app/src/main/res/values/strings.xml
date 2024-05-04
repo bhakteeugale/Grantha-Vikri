@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Grantha Vikri</string>
+    <string name="input_field_error">Complete all</string>
+    <string name="database_error">Error Occurred!</string>
+    <string name="type_spinner_select">Select Item Type</string>
+    <string name="content_spinner_select">Select Item</string>
+    <string name="item_add_success">Item Added Successfully!</string>
+    <string name="group">Group</string>
+    <string name="date">Date</string>
+    <string name="type">Type</string>
+    <string name="name">Name</string>
+    <string name="view_more_des">View More</string>
+    <string name="subactionbar_card_title">Add Objects</string>
+    <string name="subactionbar_card2_title">Add Objects</string>
+    <string name="back_button_des">Back</string>
+    <string name="add_button_des">Add Objects</string>
+    <string name="available_quantity">Available Quantity</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price(₹)</string>
+    <string name="before_sale_qty">Before Sale</string>
+    <string name="after_sale_qty">After Sale</string>
+    <string name="num_tmp">0</string>
+    <string name="amt">Amount(₹)</string>
+    <string name="delete_button_des">Delete</string>
+    <string name="inventory">Inventory</string>
+    <string name="report">Report</string>
+    <string name="sale">Sale</string>
+    <string name="exit">Exit</string>
+    <string name="kendra1">SMBPM</string>
+    <string name="kendra2">SDPM</string>
+    <string name="event">Event</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/new_border2">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:textSize="13sp"
+        android:text="Item name"
+        android:layout_width="130sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/item_type"
+        android:text="Item Type"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/amount_of_current_item"
+        android:text="Price(₹)"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/item_count"
+        android:text="Quanity"
+        android:layout_width="55sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/total_amount_for_this_sale"
+        android:text="Total(₹)"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:padding="5sp"
+        android:textColor="@color/black"
+        android:textSize="13sp"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="@drawable/new_border">
+        <Spinner
+            android:id="@+id/type_of_stock_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:padding="8sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:background="@drawable/new_border">
+        <Spinner
+            android:id="@+id/stock_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:padding="8sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

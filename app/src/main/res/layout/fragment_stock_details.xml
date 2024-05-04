@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.StockDetailsFragment">
+
+    <include layout="@layout/subactionbar_card"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp">
+
+        <ImageView
+            android:id="@+id/cover_image_inventory_book"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@color/primary"
+            android:contentDescription="Cover photo"
+            android:layout_marginRight="10sp"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/inventory_det_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Inventory Name"
+                />
+
+            <TextView
+                android:id="@+id/inventory_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type " />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15sp"
+        android:padding="5sp">
+
+        <GridLayout
+            android:id="@+id/information_grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="11"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name " />
+
+            <TextView
+                android:id="@+id/inventory_name_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inventory Name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type " />
+
+            <TextView
+                android:id="@+id/inventory_type_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date\nAdded " />
+
+            <TextView
+                android:id="@+id/inventory_date_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dd.mm.yyyy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description " />
+
+            <TextView
+                android:id="@+id/inventory_description_detail"
+                android:layout_width="270sp"
+                android:layout_height="wrap_content"
+                android:text="Description"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity\nAvailable " />
+
+            <TextView
+                android:id="@+id/inventory_available_quantity_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity\nSold " />
+
+            <TextView
+                android:id="@+id/inventory_sold_quantity_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Printed\nPrice " />
+
+            <TextView
+                android:id="@+id/inventory_printed_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discounted\nPrice " />
+
+            <TextView
+                android:id="@+id/inventory_discounted_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0"/>
+
+            <TextView
+                android:id="@+id/edition_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edition "
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/inventory_edition_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="edition"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/nickname_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nickname "
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/inventory_nickname_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nickname"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/frame_size_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frame\nSize "
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/inventory_frame_size_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:visibility="gone"/>
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>
